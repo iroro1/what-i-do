@@ -1,0 +1,72 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+
+.contact input, textarea {
+    background: rgb(20, 21, 29);
+    color: #fff;
+    padding: 1rem;
+    margin: 4px 0;
+}
+.contact input:hover, textarea:hover {
+    background: rgb(39, 41, 54);
+    color: #fff;
+    padding: 1rem;
+}
+
+/* .contact .btn{
+    width: 20%;
+    margin: 5px auto;
+    cursor: pointer;
+} */
+.contact h3{
+    text-align: right;
+    color: #fff;
+    padding-bottom: 0.4rem;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 2.5rem;
+    background:linear-gradient(to right, rgb(27, 27, 27), rgb(12, 14, 24));
+    padding-top: 3rem;
+}
+.address{
+    width: 80%;
+    color: #ffb400
+}
+
+@media (max-width: 500px){
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .address{
+        width: 80%;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+    .contact-container, .contact h3{
+        text-align: center;
+    }
+    
+    .contact .btn{
+        width: 100%;
+        margin: 5px auto;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 320px){
+    .contact-container, .contact h3{
+        margin: auto;
+    }
+}
