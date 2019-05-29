@@ -12,3 +12,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.sixty{
+  width: 60%;
+  margin: auto;
+}
+
+.cardstyle {
+  background: rgba(255, 255, 255, 0.925);
+  height: 100%;
+  box-shadow: 2px 1px  rgb(97, 97, 61);
+  border: 2px solid #000;
+  transition: all 0.5s ease-in-out
+}
+.cardstyle:hover{
+  transform: scaleX(1.1);
+  /* transform: rotate(10deg); */
+}
+
+.wrap{
+  height: 100vh;
+  overflow-Y: auto;
+}
+
+.img{
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}

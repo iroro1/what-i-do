@@ -9,11 +9,11 @@ function Nav() {
               <img src={logo} />
           <h1 className='text-white '>What <span className='text-warning'>I</span> DO <span className='text-warning'>?</span></h1>
           </div>
-            <div className=''>
+            {/* <div className=''>
                 <a href='/' className='mx-1 text-warning'>Home</a> 
                 <span className='text-white'>I</span>
                 <a href='/register' className='mx-1 text-warning'>Register</a>
-            </div>
+            </div> */}
         </nav>
     )
 }
