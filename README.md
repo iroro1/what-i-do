@@ -5,3 +5,4 @@ A react app for services rendered.
 
 First Step.
   * Create the static website.
+    * I made the logo, Nav bar and started with the showcase area. (28/05/2019 || 2 hours)
