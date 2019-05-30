@@ -1,5 +1,6 @@
 # what-i-do
-A react app for services rendered.
+A react app for services rendered. Targetted at my local community, it is meant to be a free advertising platform for small scale business services rendered.
+The goal is to breach the gap between small business owners and consumers.
 
 * I would update the readMe file as i go through the project.
 
