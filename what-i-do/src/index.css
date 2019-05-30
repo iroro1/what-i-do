@@ -17,7 +17,9 @@ code {
   width: 60%;
   margin: auto;
 }
-
+/* .bg{
+  background-image: url(./components/Display/bg.png) center center/cover no-repeat
+} */
 .cardstyle {
   display: flex;
   justify-content: space-around;
@@ -52,7 +54,11 @@ code {
 .img:hover{
   transform: scaleX(1.1);
 }
-
+.line{
+  border-bottom: 5px dashed rgb(255, 203, 32);
+  width: 80%;
+  margin: auto;
+}
 @media only screen and (max-width: 600px) {
   .cardstyle {
   flex-direction: row;

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Nav from './components/nav/Nav'
 import Showcase from './components/Display/Showcase'
 import Services from './components/Display/Services'
-import Contact from './components/Display/Contact'
 import Footer from './components/Display/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
