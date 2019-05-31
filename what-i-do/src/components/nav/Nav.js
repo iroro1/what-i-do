@@ -9,10 +9,10 @@ function Nav() {
               <img src={logo} />
           <h1 className='text-white '>What-<span className='text-warning'>I</span>-DO <span className='text-warning'>?</span></h1>
           </div>
-            {/* <div className=''>
-                <a href='/' className='mx-1 text-warning'>Home</a> 
-                <span className='text-white'>I</span>
-                <a href='/register' className='mx-1 text-warning'>Register</a>
+            {/* <div className='navgrp'>
+                <a href='/' className='mx-1  text-warning'>Home</a> 
+                
+                <a href='/login' className='mx-1  text-warning'>Login</a>
             </div> */}
         </nav>
     )

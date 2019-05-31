@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Mogra&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
 body {
   margin: 0;
   font-family: 'Mogra', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -14,55 +19,106 @@ code {
 }
 
 .sixty{
-  width: 60%;
+  width: 80%;
   margin: auto;
 }
-/* .bg{
-  background-image: url(./components/Display/bg.png) center center/cover no-repeat
-} */
-.cardstyle {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  height: 100%;
-  box-shadow: 1px 1px  rgb(97, 97, 61);
-  border: 1px solid #000;
-  transition: all 1s ease-in-out;
-  padding: 10px;
-  margin-bottom: 20px;
+/* Service */
+.primary{
+  color: rgb(228, 210, 55)
 }
-/* .cardstyle:hover{
-  transform: scaleX(1.1);
-} */
+.width-30{
+  /* width: 30%; */
+}
+/* Services */
+.promo{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items:center;
+}
+.cov-promo{
+  width: 100%;
+  margin: auto;
+}
+.serv-list{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+  grid-gap: 5px
+}
+
+.prtags{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.ser{
+  display: flex;
+  width: 100%;
+  flex-direction: column
+}
+.cardstyle {
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(to left,rgba(14, 10, 13, 0.644), rgba(33, 44, 30, 0.842) ) ;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  transition: all 1s ease-in-out;
+  padding: 15px;
+  overflow: hidden;
+  font-size: 0.8rem
+}
+.cardstyle:hover{
+  transform: rotateZ(10deg);
+  transform: scale(1.1)
+}
+
+.img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 
 .ten{
-  width: 50%;
+  width: 100%;
   text-align: left;
+
 }
 .wrap{
   height: 100vh;
   overflow-Y: auto;
+  /* flex-wrap: wrap; */
+  /* padding: .3rem .5rem ; */
 }
+.promo1{
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  style={{
+                backgroundColor: 'black',
+                display:'grid',
+                gridTemplateColumns: '1fr ifr'
+            }}*/
+}
+.navgrp{
+  display: flex;
+}
+/* .nav{
+  background: #000;
+  padding:15px;
+  text-align: center;
+  width: 4rem;
+  overflow: hidden;
+} */
 
-.img{
-  height: 15rem;
-  width: 15rem;
-  border-radius: 50%;
-  transition: all 0.5s ease-in-out;
-}
-.img:hover{
-  transform: scaleX(1.1);
-}
 .line{
   border-bottom: 5px dashed rgb(255, 203, 32);
   width: 80%;
   margin: auto;
 }
 @media only screen and (max-width: 600px) {
-  .cardstyle {
-  flex-direction: row;
-  flex-wrap: wrap ;
-  }
 
 }

@@ -9,9 +9,10 @@ export class Footer extends Component {
             height:'100%',
             background:'#1c2b4d',
             padding:'1rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            marginTop: '2rem'
           }}>
-          <p><i class="fas fa-phone mx-2 text-warning"></i><a className='text-warning' href='tel:+905338572105'>+905338572105</a></p>
+          <p><i class="fas fa-phone  mx-2 text-warning"></i><a className='text-warning' href='tel:+905338572105'>+905338572105</a></p>
         <div>
          <a className='text-warning p-2' href='mailto:ojigboleo@gmail.com'><i class="fas fa-envelope fa-2x"></i></a>
          <a className='text-danger p-2' href='https://www.instagram.com/iroro1/' target='_blank'><i class="fab fa-instagram fa-2x"></i></a>
