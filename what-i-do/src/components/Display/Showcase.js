@@ -17,41 +17,38 @@ class Showcase extends Component {
                 <button onClick={() =>
                      this.setState({showform:
                       !this.state.showform})
-                      } className='btn btn-outline-warning btn-block'>Upload Ad</button>
+                      } className='btn btn-outline-warning btn-block py-1'>Upload Ad</button>
 
                 {showform ? 
                 <div className='container' id='upload'>
                 <h2 className='text-warning pt-4 mb-3 text-center'>Add Your Service</h2>
                 <form className='form-group row' >
                     <div className='col-md-6 mb-2'>
-                    <input className='form-control bg-light text-dark ' type='text' name='firstName' placeholder='Enter your First Name' required/>
+                    <input className='form-control bg-light text-dark ' type='text' name='firstName' placeholder='First Name' required/>
                     </div>
                     <div className='col-md-6 mb-2'>
-                    <input className='form-control bg-light text-dark ' type='text' name='lastName' placeholder='Enter your Last Name' required/>
+                    <input className='form-control bg-light text-dark ' type='text' name='lastName' placeholder='Last Name' required/>
                     </div>
                     <div className='col-md-6 mb-2'>
-                    <input className='form-control bg-light text-dark ' type='email' name='email' placeholder='Enter your EMAIL' required/>
+                    <input className='form-control bg-light text-dark ' type='email' name='email' placeholder=' EMAIL' required/>
                     </div>
                     <div className='col-md-6 mb-2'>
-                    <input className='form-control bg-light text-dark ' type='text' name='phone' placeholder='Enter your PHONE NUMBER' required/>
+                    <input className='form-control bg-light text-dark ' type='text' name='phone' placeholder=' PHONE NUMBER' required/>
                     </div>
                     
                     <div className='col-md-6 mb-2'>
-                    <input className='form-control bg-light text-dark ' type='text' name='title' placeholder='3 words for what you do' required/>
+                    <input className='form-control bg-light text-dark ' type='text' name='title' placeholder='TITLE(3 words)' required/>
                     </div>
                     <div className='col-md-6 mb-2'>
-                    <input className='form-control bg-light text-dark ' type='text' name='service' placeholder='5 words for service ad' required/>
+                    <input className='form-control bg-light text-dark ' type='text' name='service' placeholder='SERVICE RENDERED(5 words)' required/>
                     </div>
+                    
                     <div className='col-md-6 mb-2'>
                     <input className='form-control bg-light text-dark ' type='text' name='price' placeholder='Enter price...eg 1800.' required/>
                     </div>
                     <div className='col-md-6  mb-2'>
                     <input className='form-control bg-light text-dark ' type='text' name='location' placeholder='Enter LOCATION...eg lefkosa.' required/>
                     </div>
-                    <div className='col-md-6  mb-2'>
-                    <input className='form-control bg-light text-dark ' type='text' name='passport' placeholder='international passport number' required/>
-                    </div>
-
                     <p className='line my-3'></p>
 
                     {/* <div class="custom-file col-md-10 mx-auto mt-2 mb-2">
@@ -68,7 +65,7 @@ class Showcase extends Component {
                     </div> */}
                     <input type='submit' value='Submit' className='btn btn-block btn-outline-warning '/>
                     <small  class=" text-primary mt-1">
-                    * All fields are required. Do not send money if you cannot confirm or meet the service provider in person. Thank you.
+                    * All fields are required. Always use the ssame particulars when changing your ads. Multiple detected ads would be dropped. Do not send money if you cannot confirm or meet the service provider in person. Thank you.
                     </small>
             </form>
             </div>
