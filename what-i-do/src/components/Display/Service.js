@@ -8,15 +8,16 @@ export default function Service(props) {
             <div className=''>
                 <div className='cardstyle '>
                     <div>                
-                        <img className='img ' src={logo} alt='Service Picture'/>
+                        <img className='img ' src={logo} alt='logo'/>
                     </div>
-                    <div className=' '>
-                        <p><b className='primary'>What I DO </b>: {props.title} </p>
-                        <p><b className='primary'>Service </b>: {props.service}</p>
-                        <p><b className='primary'>Location </b>: {props.location}.</p>
-                        <p><b className='primary'>Phone </b>: <a className='text-white' href={`tel:${props.phone}`}>{props.phone}.</a></p>
-                        <p><b className='primary'>Email </b>: <a className='text-white' href={`mailto:${props.email}`}> {props.email}.</a></p>
-                        <p><b className='primary'>Price </b>: Starting From <b className='bold'>{props.price}</b> <em>TL</em>.</p>
+                    <div className=' serv'>
+                    <h3 className='primary text-center'>{props.firstName}  {props.lastName}</h3>
+                        <p className='text-light text-center'> {props.title} </p>
+                        <p className='text-light'> {props.service} in {props.location}.</p>
+                        
+                        <p><i className='fas fa-phone primary mr-2'></i><a className='text-white ' href={`tel:${props.phone}`}>{props.phone}.</a> </p><p> <i className='fas fa-envelope primary mr-2'></i><a className='text-white' href={`mailto:${props.email}`}> {props.email}.</a></p>
+{/* 
+                        <p> Starting From <b className='bold'>{props.price}</b> <em>TL</em>.</p> */}
                     </div>
                 </div>
             </div>

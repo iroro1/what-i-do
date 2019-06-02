@@ -27,14 +27,16 @@ class App extends Component {
   componentDidMount(){
     fetch(`https://what-i-do-34510.firebaseio.com/Services.json`)
     .then(response => response.json())
-    .then(data => this.setState(this.state.services = data))
+    .then(data => this.setState({services : data}))
   }
+
+  
   render() {
     return (
       <div >
         <Nav />
         <Showcase />
-        <Services services={this.state.services}/>
+        <Services services={this.state.services} />
         <Footer/>
       </div>
     )
