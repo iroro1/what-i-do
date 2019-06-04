@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Footer.css'
 
 export class Footer extends Component {
   render() {
@@ -10,7 +9,7 @@ export class Footer extends Component {
             background:'#1c2b4d',
             padding:'1rem',
             textAlign: 'center',
-            marginTop: '2rem'
+            marginTop: '2rem',
           }}>
           <p><i className="fas fa-phone  mx-2 text-warning"></i><a className='text-warning' href='tel:+905338572105' >+905338572105</a></p>
         <div>
@@ -21,10 +20,17 @@ export class Footer extends Component {
         </div> 
         </div>
         
-        <p className='footer'>&copy; 2019 Leo Ojigbo.</p>
+        <p style={footer}>&copy; 2019 Leo Ojigbo.</p>
       </div>
     )
   }
 }
 
+const footer = {
+    textAlign: 'center',
+    background: 	'#1a181f',
+    color:  '#ffb400',
+    height: '100%',
+    padding: '1rem'
+}
 export default Footer

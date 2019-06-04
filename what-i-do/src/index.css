@@ -18,6 +18,11 @@ code {
     monospace;
 }
 
+/* ShowCase Area */
+.bg{
+  background: url(./components/Display/bg.png) center center/cover no-repeat;  
+}
+
 .sixty{
   width: 80%;
   margin: auto;
