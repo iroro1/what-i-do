@@ -22,6 +22,11 @@ code {
 .bg{
   background: url(./components/Display/bg.png) center center/cover no-repeat;  
 }
+/* Hover for Cards */
+.cardstyle:hover{
+  transform: rotateZ(10deg);
+  transform: scale(1.1)
+}
 
 .sixty{
   width: 80%;
@@ -31,86 +36,19 @@ code {
 .primary{
   color: rgb(241, 227, 30)
 }
-.width-30{
-  /* width: 30%; */
-}
-/* Services */
-.promo{
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-items:center;
-}
-.cov-promo{
-  width: 100%;
-  margin: auto;
-}
-.serv-list{
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: 100%;
-  grid-gap: 5px
-}
 
-.prtags{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
-.ser{
-  display: flex;
-  width: 100%;
-  flex-direction: column
-}
-.cardstyle {
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  background: linear-gradient(to left,rgba(54, 39, 51, 0.644), rgba(46, 54, 44, 0.842) ) ;
-  /* color: rgb(255, 255, 255); */
-  border-radius: 10px;
-  transition: all 1s ease-in-out;
-  padding: 15px;
-  overflow: hidden;
-  font-size: .85rem;
-  /* display: flex;
-  flex-wrap: wrap */
-}
-.cardstyle:hover{
-  transform: rotateZ(10deg);
-  transform: scale(1.1)
-}
-
+/* image */
 .img{
   height: 50px;
   width: 50px;
   border-radius: 50%;
 }
 
-
-/* .ten{
-  width: 100%;
-  text-align: left;
-
-} */
 .wrap{
   height: 100vh;
   overflow-Y: auto;
 }
 
-.navgrp{
-  display: flex;
-}
-
-.line{
-  border-bottom: 5px dashed rgb(255, 203, 32);
-  width: 80%;
-  margin: auto;
-}
-
-.align{
-  margin: auto
-}
 @media only screen and (max-width: 500px) {
   .cardstyle {
     width: 100%;
@@ -120,12 +58,3 @@ code {
     transform: none
   }
 }
-/* @media only screen and (max-width: 500px) {
-  .cardstyle {
-    width: 350px;
-    height: 350px;
-  }
-  .cardstyle:hover{
-    transform: none
-  }
-} */

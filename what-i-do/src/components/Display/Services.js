@@ -1,6 +1,7 @@
 import React,{ Component} from 'react'
 import Service from './Service'
 import escapeRegExp from 'escape-string-regexp'
+import { Helmet } from 'react-helmet'
 
 
 
@@ -19,7 +20,6 @@ class Services extends Component {
             }  
     }
     componentDidMount(){
-            
         fetch(`https://what-i-do-34510.firebaseio.com/ecards.json`)
         .then(response => response.json())
         .then(data =>{
@@ -33,20 +33,22 @@ class Services extends Component {
 
         } )
      }
+
+
     updateQuery = (query) => {
         this.setState({ query: query.trim()})
     }  
 
     render(){
-        
+       
         let showService
         if(this.state.query){
             const match = new RegExp(escapeRegExp(this.state.query), 'i')
             showService = this.state.services.filter((service) => match.test(service.service) || match.test(service.location) ||  match.test(service.title))
         }else{
-            showService = this.state.services
+            showService = this.state.services.sort()
         }
-
+        // Math.random(promo,1)
         return (
         <React.Fragment>
         <div className=' container'>
@@ -64,22 +66,27 @@ class Services extends Component {
            <div className='container'>
            
                <div className='row wrap'>
-        {console.log((showService))}
                {
                 showService.map((item,i) => {
                     return (
                         <div className='col-lg-4 col-md-6 col-sm-12 py-1 ' key={item.id}>
+                        <Helmet>
+                        <title>What-I-Do | Services Page</title>
+                        <meta name='description' content="What-I-Do Home Page." />
+                        <meta name='keywords' content="Services, E-cards, Trnc, kktc, cakes in cyprus, free ads cyprus, put up freee ads" />
+                        </Helmet>
                            <Service
                             key={item.id}
                             firstName={item.firstName}
                             lastName={item.lastName}
-                            pic={item.pic}
                             title={item.title}
                             service={item.service}
                             phone={item.phone}
                             email={item.email}
                             location={item.location}
-                            price={item.price}
+                            insta={item.insta}
+                            twt={item.twt}
+                            link={item.link}
                             />
                               </div>
                     );
@@ -97,16 +104,3 @@ class Services extends Component {
 
 
 export default  Services;
-
-    // darr = []
-
-    // objToarr = (obj) => {
-    //     for (let key in obj){
-    //         if (obj.hasOwnProperty(key)){
-    //             console.log(obj[key])
-    //             this.darr += obj[key]
-    //             console.log(this.darr)
-    //         }
-    //     }
-
-    // }

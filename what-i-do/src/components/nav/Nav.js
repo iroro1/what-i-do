@@ -7,7 +7,7 @@ function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
    <Link to='/' className='nav-link'> <img src={logo} alt="header nav bar"/></Link> 
-   <h2 className='text-white '>What-<span className='text-warning'>I</span>-DO <span className='text-warning'>?</span></h2>
+   <h2 className='text-white '>W<span className='text-warning'>I</span>D<span className='text-warning'>E</span></h2>
   <button  className="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon " ></span>
   </button>

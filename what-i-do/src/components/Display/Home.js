@@ -2,20 +2,45 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Showcase from './Showcase'
 import Service from './Service'
+import { Helmet } from 'react-helmet'
 
 export default class Home extends Component {
     state = {
         promo:[],
     }
- 
-    componentDidMount(){      
-    fetch(`https://what-i-do-34510.firebaseio.com/Promo.json`)
-    .then(response => response.json())
-    .then(data => this.setState({promo:data}))
+    fixData = (maddObj) => {
+        let lis1=[]
+        for (var e in maddObj){
+            if (maddObj.hasOwnProperty){
+                        lis1=[...lis1,maddObj[e]]
+                }
+            }  
+    }
+    componentDidMount(){
+        fetch(`https://what-i-do-34510.firebaseio.com/ecards.json`)
+        .then(response => response.json())
+        .then(data =>{
+            let lis1=[]
+            for (var e in data){
+                if (data.hasOwnProperty){
+                            lis1=[...lis1,data[e]]
+                    }
+                } 
+            this.setState({promo : lis1})
+            }
+         )
     }
     
-    render() {
-        
+
+        render() {
+            const { promo } = this.state;
+          
+            let promoList = []
+            for(var e in promo){
+                if(promo[e].promo === true){
+                    promoList = [...promoList, promo[e]]
+                }
+            }
         return (
             <div>
                 <Showcase/>
@@ -27,25 +52,30 @@ export default class Home extends Component {
             </div>
                 <div className='container'>
            <div className='row '>
-        {console.log((this.state.promo))}
 
            {
 
-               this.state.promo.map((item,i) => {
+            promoList.map((item,i) => {
                 return (
                     <div className='col-lg-4 col-md-6 col-sm-12 py-1 ' key={item.id}>
+                    <Helmet>
+                        <title>What-I-Do | Home page</title>
+                        <meta name='description' content="What-I-Do Home Page." />
+                        <meta name='keywords' content="Services, E-cards, Trnc, kktc, cakes in cyprus, free ads cyprus, put up freee ads" />
+                    </Helmet>
                        <Service
-                        key={item.id}
-                        firstName={item.firstName}
-                        lastName={item.lastName}
-                        pic={item.pic}
-                        title={item.title}
-                        service={item.service}
-                        phone={item.phone}
-                        email={item.email}
-                        location={item.location}
-                        price={item.price}
-                        />
+                            key={item.id}
+                            firstName={item.firstName}
+                            lastName={item.lastName}
+                            title={item.title}
+                            service={item.service}
+                            phone={item.phone}
+                            email={item.email}
+                            location={item.location}
+                            insta={item.insta}
+                            twt={item.twt}
+                            link={item.link}
+                            />
                           </div>
                 );
             })

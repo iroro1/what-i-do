@@ -1,17 +1,22 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+
 
 function About() {
     return (
         <React.Fragment>
+            <Helmet>
+            <title>What-I-Do | About page</title>
+            <meta name='description' content="The about page of the What-I-Do." />
+            <meta name='keywords' content="Services, E-cards, Trnc, kktc, cakes in cyprus, free ads cyprus, put up freee ads" />
+            </Helmet>
             <div className=' col-md-12' >
             <div  style={jumb}>
-            {/* <img src={logo} style={profile} alt="Leo Ojigbo"/> */}
-            <h1 className='display-3 text-center text-white'>Leo Ojigbo</h1>
+            <h1 className='display-3 text-center text-white'>About W<span className='text-warning'>I</span>D<span className='text-warning'>E</span></h1>
             </div>
             </div>
             <div className='container py-2'>
-                <p className='blockqoute'>Leo Ojigbo is a Nigerian and holds a masters degree in Computer engineering from the european university of lefke in Northern Cyprus. Having obtained a Bachelors in Computer and mathematics science, he has always be passionate about development and spends most of his time studying and learning new things. His masters thesis was in machine learning emotion recognition from text and he has been engaging in studies involving machine learning to gain mastery over the techniques since then. </p>
-                <p className='blockqoute'> This app was created from the need to bring small businesses together for free. Whereever you are on the Island, upload your e-business card and make it easier to find you..</p>
+                <p className='lead'>Wide was designed and developed by Leo  to link small scale businesses and startups to the public for free. Just upload your business cards and people can reach out to you. Avoid fraudulent activities and stay safe online as you transact business. Where ever you are on the Island, upload your e-business cards today and make it easier for people to find you..</p>
                 <p className=" text-right text-primary "><a className=' p-2 nav-link' href='mailto:ojigboleo@gmail.com'>
                 Send a mail if you wish to reach out. 
                 </a></p>
