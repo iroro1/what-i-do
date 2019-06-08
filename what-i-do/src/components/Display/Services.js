@@ -48,9 +48,13 @@ class Services extends Component {
         }else{
             showService = this.state.services.sort()
         }
-        // Math.random(promo,1)
         return (
         <React.Fragment>
+            <Helmet>
+                        <title>What-I-Do | Services Page</title>
+                        <meta name='description' content="What-I-Do Home Page." />
+                        <meta name='keywords' content="Services, E-cards, Trnc, kktc, cakes in cyprus, free ads cyprus, put up freee ads" />
+                        </Helmet>
         <div className=' container'>
             <h2 className="text-center pt-4 text-primary"> Services</h2>
              <div className=''>
@@ -70,11 +74,7 @@ class Services extends Component {
                 showService.map((item,i) => {
                     return (
                         <div className='col-lg-4 col-md-6 col-sm-12 py-1 ' key={item.id}>
-                        <Helmet>
-                        <title>What-I-Do | Services Page</title>
-                        <meta name='description' content="What-I-Do Home Page." />
-                        <meta name='keywords' content="Services, E-cards, Trnc, kktc, cakes in cyprus, free ads cyprus, put up freee ads" />
-                        </Helmet>
+                        
                            <Service
                             key={item.id}
                             firstName={item.firstName}

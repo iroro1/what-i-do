@@ -22,7 +22,7 @@ onSubmit = (e) => {
   let eid = this.state.email;
   let punc = eid.replace(/[.@]/g,"");
   let pid= punc.replace(/\s{2,}/g," ");
-  this.setState({id : pid});
+  this.state.id = pid;
   let uuid = this.state.id;
   let data= (this.state);
   fetch(`https://what-i-do-34510.firebaseio.com/ecards/${uuid}.json`,{
@@ -90,7 +90,7 @@ onChange = (e) => {this.setState({[e.target.name] : e.target.value})}
                     
                     <div className='col-md-12 mb-2'>
                     <input className='form-control bg-light text-dark ' type='text' name='title' placeholder='Title (eg. Computer Technician)' 
-                    maxlength ="15"                    
+                    maxLength ="15"                    
                     required
                     value={this.state.title}
                     onChange={this.onChange}
@@ -98,7 +98,7 @@ onChange = (e) => {this.setState({[e.target.name] : e.target.value})}
                     </div>
                     <div className='col-md-12 mb-2'>
                     <input className='form-control bg-light text-dark ' type='text' name='service' placeholder='Service offered(eg. I make live ...)'
-                    maxlength ="250"
+                    maxLength ="250"
                     required
                     value={this.state.service}
                     onChange={this.onChange}

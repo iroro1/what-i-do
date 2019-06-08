@@ -41,6 +41,8 @@ export default class Home extends Component {
                     promoList = [...promoList, promo[e]]
                 }
             }
+            console.log(promoList)
+
         return (
             <div>
                 <Showcase/>

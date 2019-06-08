@@ -27,7 +27,7 @@ export default function Service(props) {
 }
 
 const cardstyle ={
-width: '100%',
+  width: '100%',
   height: '300px',
   overflow: 'hidden',
   background:' linear-gradient(to left,rgba(54, 39, 51, 0.644), rgba(46, 54, 44, 0.842) )' ,
@@ -38,6 +38,8 @@ width: '100%',
   display: 'flex',
   lineHeight: '1.2',
   flexDirection: 'column',
+  boxShadow:' -1px 10px 15px rgba(0,0,0,0.29), 0 6px 6px rgba(0,0,0,0.33)',
+  margin: '2px'
 }
 const ico = {
     display: 'flex',
